@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom'
 import useDarkMode from '../hooks/useDarkMode'
 
 const Navbar = () => {
@@ -9,13 +10,15 @@ const Navbar = () => {
   };
   return (
     <nav className="navbar">
-      <h1>Crypto Tracker</h1>
+      <Link to='/coins'><h1 className='header'>Crypto Tracker</h1></Link>
+        
       <div className="dark-mode__toggle">
         <div
           onClick={toggleMode}
           className={darkMode ? 'toggle toggled' : 'toggle'}
         />
       </div>
+   
     </nav>
   );
 };
